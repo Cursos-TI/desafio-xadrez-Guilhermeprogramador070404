@@ -18,9 +18,15 @@ int main() {
     printf("Movimentação do Bispo!\n");
     do
     {
-        printf("Cima, Direita\n");
+        do
+        {
+            printf("Direita\n");
+            i++;
+        } while (i < 5);
+        
+        printf("Cima\n");
         i++;
-    } while (i < 10);
+    } while (i < 20);
     printf("\n");
 
     // Mover a Rainha 8 casas para a esquerda
@@ -34,15 +40,19 @@ int main() {
 
     // Mover o Cavalo 2 casas para baixo e 1 para direita
     printf("Movimentação do Cavalo!\n");
-    while (movimentoCompleto--)
-    {
-        for (i = 0; i < 2; i++)
+    
+    
+        for (i = 0; i < 3; i++)
         {
+            if (i == 1) continue;
+            if (i == 2) break;
+            printf("%d", i);
+            printf("Direita\n");
             printf("Cima\n");
         }
-        printf("Direita\n");
+
         i++;
-    }
+    
 
     
     return 0;
